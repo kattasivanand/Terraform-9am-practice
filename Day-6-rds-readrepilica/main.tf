@@ -121,7 +121,7 @@ resource "aws_db_instance" "read_replica" {
   auto_minor_version_upgrade = true ## this means AWS will automatically upgrade your RDS database when a new minor version of the engine becomes available.If AWS releases a newer minor version like 8.0.43, then:✅ It will be upgraded automatically during a maintenance window
   skip_final_snapshot        = true
   deletion_protection        = false
-    #availability_zone       = "us-east-1a" # optional, specify if needed.if you give like this this readreplica instance created 1a A.Z.
+  #availability_zone       = "us-east-1a" # optional, specify if needed.if you give like this this readreplica instance created 1a A.Z.
   vpc_security_group_ids     = [aws_security_group.my_sg.id]
 
   depends_on                 = [aws_db_instance.rds]
