@@ -100,6 +100,7 @@ resource "aws_db_instance" "rds" {
     password = "sivananddevops"
     db_subnet_group_name = aws_db_subnet_group.subnet_group.name #call db subnet group here.because Terraform can't assign a full object to a field that expects just a string name that's what we are give .name This passes the string name "my-db-subnet-group"
     vpc_security_group_ids = [aws_security_group.my_sg.id]
+    publicly_accessible        = false
     skip_final_snapshot = true  #When skip_final_snapshot = true, it tells the system not to create a final backup (snapshot) of the database instance before it is delete.
     #When deleting a database (like in AWS RDS), you normally get a final snapshot — a last backup — so you can restore it later if needed.
     #but if you set skip_final_sanpshot = true that means No backup will be created before deletion.2.If you delete the database, all data is gone.3.You cannot recover it later.
