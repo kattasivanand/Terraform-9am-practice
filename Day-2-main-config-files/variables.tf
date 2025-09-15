@@ -1,4 +1,4 @@
-variable "ami_id" {
+variable "ami-id" {
     description = "inserting the ami values to main.tf"
     type = string
     default = ""
