@@ -1,2 +1,2 @@
-ami-id = "ami-0b09ffb6d8b58ca91"
+ami-id = "ami-0127d526e6097cfe5 "
 type = "t2.micro"
